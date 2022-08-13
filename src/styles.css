@@ -87,10 +87,10 @@
 
 
 .tweet-submit{
-    width:70%;
+    width:100%;
     border: 0px;
     background-color: #1d9bf0;
-    height:8.5%;
+    height:6%;
     border-radius: 25px;
     align-items: center;
     justify-items: center;
@@ -110,6 +110,10 @@
     margin-bottom: 2px;
     display: flex;
     flex-direction: row;
+    /* to keep account details at bottom */
+    position: fixed;
+    bottom: 0;
+    
     
     
 }
@@ -122,14 +126,18 @@
     align-items: center;
     justify-content: left;
 }
+#main-account-photo{
+    width: 5%;
+}
 .account-details {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
-    padding-left: 5px;
+   
+
     font-size: 15px;
+
 
 }
 .name{
@@ -231,6 +239,7 @@
     width: 48vw;
     position: absolute;
     top:0px;
+    scroll-behavior: smooth;
 }
 
 
@@ -244,8 +253,9 @@
     flex-direction: row;
     width: 48%;
     height: 50px;
-    background-color:#eff3f4;
-    z-index: 10;
+    background-color:#ffffff;
+    /* To make sure that home overlays when scrolling */
+    z-index: 50;
 }
 #star{
     display: inline-block;
@@ -396,23 +406,21 @@
 }
 .account-name{
     display: flex;
-    width:550px;
+    width:500px;
     height: 25px;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 .account-name p2{
     font-weight: 500;
-    width: 175px;
-    margin-left: 15px;
-    margin-right: 0px;
-    padding-right:0px;
+    width: fit-content;
+
 
 }
 .account-name p1{
     font-weight: 300;
     color:#78909c;
-    margin-right: 200px;
-    width:220px;
+   
+    width:fit-content;
 
 }
 #veryfy{
@@ -421,9 +429,18 @@
     width: 20px;
     
 }
+#hashtags{
+    color:#83c8f7;
+}
+#hastags :hover{
+    cursor:pointer;
+}
 .account-name #more-feed{
     display: flex;
     font-size: large;
+    margin-right: none;
+    position: absolute;
+    right:0;
     
     
     
