@@ -3,6 +3,21 @@
     padding:0;
     box-sizing: border-box;
 }
+.entire-page{
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    display:flex;
+    padding-top: 10px;
+    padding-left:20px;
+    padding-right:1px;
+    flex-direction: row;
+    position:fixed;
+    overflow-y: hidden;
+   
+    
+    
+}
 .twitter-logo-container{
     width:50px;
     height:50px;
@@ -16,6 +31,12 @@
     height:30px;
     
 }
+.twitter-logo-container :hover{
+    border-radius: 50%;
+    background-color:#eaefef
+    ;
+    
+}
 
 
 .buttons{
@@ -24,6 +45,17 @@
     background-color: white;
     display: flex;
     align-items: center;
+  
+}
+
+.button-content:hover{
+    border-radius:15px;
+    background-color:#eaefef
+    ;
+   padding-top: 2px;
+   padding-bottom: 2px;
+ 
+    
 }
 .button-content{
     display:flex;
@@ -49,32 +81,18 @@
 }
 
 
-.entire-page{
-    width: 100vw;
-    height: 100vh;
-    /* background-color: red; */
-    display:flex;
-    padding-top: 10px;
-    padding-left:20px;
-    padding-right:1px;
-    flex-direction: row;
-    position:fixed;
-    overflow-y: hidden;
-   
-    
-    
-}
+
 
 .section{
     display:flex;
     flex-direction: column;
     padding-left: 15px;
-    padding-right: 15px;
+    
 }
 
 #sidebar {
-    padding-left: 30px;
-    padding-right: 15px;
+    
+    padding-left: 15px;
     width: 22vw;
     background-color:white;
     position:fixed;
@@ -87,36 +105,73 @@
 
 
 .tweet-submit{
-    width:100%;
+    width:80%;
     border: 0px;
     background-color: #1d9bf0;
-    height:6%;
+    height:8%;
     border-radius: 25px;
+    display: flex;
     align-items: center;
-    justify-items: center;
-    padding: 0px, 32px;
-    margin-top: 10px;
-    margin-bottom: 5px;
+    justify-content: center;
+}
+.tweet-submit :hover{
+
+    background-color:#1a90df ;
+    width:100%;
+    height:100%;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:0px;
+
+
+
 }
 .tweet-submit h4{
   color:white;
   font-size: 17px;
 }
 .account-section{
-    height: 10%;
-    width:90%;
-    background-color:white;
-    margin-top: 15px;
-    margin-bottom: 2px;
+    height: 8%;
+    width:18%;
+    border-radius: 15%;
+    align-items: center;
+    justify-content: center;
     display: flex;
     flex-direction: row;
     /* to keep account details at bottom */
     position: fixed;
-    bottom: 0;
+    bottom: 20px;
+    left:30px;
+    
     
     
     
 }
+.account-section:hover{
+    height: 8%;
+    width:18%;
+    background-color:#eaefef
+    ;
+    border-radius: 15%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    /* to keep account details at bottom */
+    position: fixed;
+    bottom: 20px;
+    left:30px;
+    z-index:5;
+    border:0px;
+    
+    
+    
+    
+    
+}
+
 .material-icons{
     font-size: 48px;
     color: #78909c;
@@ -131,24 +186,25 @@
 }
 .account-details {
     height: 100%;
+    margin-left: 17%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-   
-
     font-size: 15px;
+
 
 
 }
 .name{
     font-weight: 700;
-    font-size: 16px;
+    font-size: 15px;
 }
 .account-tag p{
     margin-bottom:0;
+    font-size: 15px;
 }
 .more-settings{
-    margin-left: 50px;
+    margin-left: 10px;
 }
 #more-settings{
     font-size: 24px;
@@ -161,10 +217,15 @@
     padding-left: 1vw;
     overflow-x: hidden;
     padding-bottom: 30px; 
-    overscroll-behavior: contain;
+  
     
     
     
+}
+.post-card :hover{
+    cursor: pointer;
+    background-color: #eaefef
+    ;
 }
 .feed-section{
     display: flex;
@@ -175,9 +236,10 @@
     height: 2668px;
     width: 100%;
 }
-.feed-column{
+.feed-column {
     display: flex;
     flex-direction: column;
+
     
    
     
@@ -186,12 +248,14 @@
 #post-column{
     width:48vw;
     overflow-x: hidden;
-    overscroll-behavior-y:contain;
+    overflow-y: hidden;
+
+  
     margin-top:172px;
-    overflow-y: visible;
+    
     height: 2496px;
     /* background-color: aqua; */
-    z-index: 10;
+
     
    
 }
@@ -240,6 +304,15 @@
     position: absolute;
     top:0px;
     scroll-behavior: smooth;
+    border-color:#eaefef
+    ;
+    border-style: solid;
+    border-width: 0.1px;
+    border-bottom: 0;
+}
+
+.topblock :hover{
+    cursor: pointer;
 }
 
 
@@ -247,7 +320,10 @@
 .home-text{
     position: fixed;
     top:10px;
-    left:22.5%;
+    /* left:20vw; */
+    right: calc(45px+25.5%);
+    width:48vw;
+
 
     display: flex;
     flex-direction: row;
@@ -256,33 +332,76 @@
     background-color:#ffffff;
     /* To make sure that home overlays when scrolling */
     z-index: 50;
+    border-color:#eaefef
+    ;
+    border-style: solid;
+    border-width: 0.1px;
+    border-top: 0;
+    border-bottom: 0;
 }
 #star{
-    display: inline-block;
-    margin-top: 10px;
-    margin-left: 80%;
-    font-weight: 100;
+    
     font-size: x-large;
-}
+  
 
+    
+}
+.top-tweets{
+    width: fit-content;
+    height: fit-content;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    top:5px;
+    border-radius: 50%;
+
+}
+.top-tweets :hover{
+    background-color: #eaefef
+    ;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    top:5px;
+}
 .post-text{
     display:flex;
-    width:100%;
-    border:0px;
-    height:100%;
+    width:90%;
+    border:none;
+   
     cursor: text;
     /* background-color:pink; */
-}.post-text input{
-    margin:0;
-    box-sizing: border-box;
-    width:40%;
-    appearance: none;
-    border:none;
-    padding-left: 5px;
-    font-size:16px;
-    font-weight: 400px;
-    padding-top: 20px;
 }
+.post-text #input-space {
+    width:100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    border:0px;
+    outline-width: 0; 
+    font-weight: 400px;
+    font-size: 18px;
+    /* this gets rid of the border around the input section */
+
+}
+.post-text #input-space:hover {
+    width:100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    border:0px;
+    cursor: text;
+
+}
+.post-text:hover{
+    cursor:text;
+  
+}
+
 #feed-account{
     display: flex;
     align-content: center;
@@ -302,6 +421,7 @@
     color: #78909c;
     align-content:flex-start;
     justify-content:baseline;
+    width: calc(48vw -10%);
     
 }
 #globe{
@@ -343,8 +463,18 @@
     font-size: 20px;
     padding: 0;
     margin: 0;
-    width:35px;
+    width:fit-content;
     color: #1d9bf0;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    border-radius: 50%;
+}
+#topicons:hover{
+    background-color: #eaefef
+    ;
+    cursor: pointer;
 }
 .bottom-of-tweet-section{
     display: flex;
@@ -374,17 +504,21 @@
 
 .post-card{
     width:100%;
-    height:fit-content;
-    /* background-color: orange; */
+    height:700px;
     display: flex;
     margin-top: auto;
+    border-color:#eaefef
+    ;
+    border-style: solid;
+    border-width: 0.1px;
+   
+
 }
 .thumbnail{
     height: 50px;
     width: 50px;
     /* background-color: white; */
     border-radius: 50%;
-    z-index: 10;
     border-bottom: 100px;
     padding:5px;
     margin: 10px;
@@ -392,6 +526,9 @@
    
     
     
+}
+.thumbnail :hover{
+    background-color: #eaefef;
 }
 .propic{
     border-radius: 50%;
@@ -404,51 +541,64 @@
     width:50px;
     border-radius: 50%;
 }
+.maindetails{
+    position: relative;
+}
 .account-name{
     display: flex;
     width:500px;
     height: 25px;
     justify-content: flex-start;
+    margin-top: 10px;
+    position:relative;
 }
 .account-name p2{
     font-weight: 500;
     width: fit-content;
+    
 
 
 }
+
+
 .account-name p1{
     font-weight: 300;
     color:#78909c;
-   
-    width:fit-content;
+    width: fit-content;
+ 
 
 }
 #veryfy{
+    display:flex;
     font-size: large;
     color: #1d9bf0;
-    width: 20px;
+    width: fit-content;
     
 }
 #hashtags{
     color:#83c8f7;
 }
+
+
 #hastags :hover{
     cursor:pointer;
 }
+
 .account-name #more-feed{
-    display: flex;
     font-size: large;
-    margin-right: none;
-    position: absolute;
-    right:0;
     
     
     
 }
+.dotbox{
+   left:100%;
+   position: absolute;
+   height: fit-content;
+
+}
 .text-of-post{
-    margin-left: 15px;
     margin-right: 35px;
-    padding-top:5px;
+    padding-top:0px;
     width:500px;
     padding-right: 10px;
     word-wrap: break-word;
@@ -477,12 +627,46 @@
     justify-content: space-around;
     justify-content: space-between;
 }
-#post-icons-id{
+#post-icons-id-comment{
     height:25px;
     width:25px;
     font-size:x-large;
 }
-
+#post-icons-id-transform{
+    height:25px;
+    width:25px;
+    font-size:x-large;
+}#post-icons-id-border{
+    height:25px;
+    width:25px;
+    font-size:x-large;
+}#post-icons-id-upload{
+    height:25px;
+    width:25px;
+    font-size:x-large;
+}
+#post-icons-id-comment:hover{
+    height:25px;
+    width:25px;
+    font-size:x-large;
+    color:blue;
+}
+#post-icons-id-transform:hover{
+    height:25px;
+    width:25px;
+    font-size:x-large;
+    color:green;
+}#post-icons-id-border:hover{
+    height:25px;
+    width:25px;
+    font-size:x-large;
+    color:red;
+}#post-icons-id-upload:hover{
+    height:25px;
+    width:25px;
+    font-size:x-large;
+    color:blue;
+}
 
 .search-button{
     display: flex;
@@ -495,9 +679,12 @@
     width:25.5%;
     border-radius: 20px;
     padding: 25px;
+    background-color:#eaefef;
+    margin-bottom: 3px;
 }
 .search-button p1{
-    color:#cecfcf;
+    color:#78909c;
+    ;
     font-weight: 400;
 }
 .search-button .material-icons{
@@ -522,6 +709,7 @@
 }
 #start{
     margin-top: 30px;
+    background-color: #eaefef;
 }
 .trend-tweet{
     padding:5px;
@@ -562,14 +750,16 @@
 #who-follow{
     margin-top: 25px;
     padding-top: 5px;
+    background-color: #eaefef;
     
 }
 .sticky{
     position: sticky;
-    top:50px;
+    top:35px;
 }
 #end{
     top:299.9px;
+    
 }
 #start{
     border-bottom-left-radius: 0px;
@@ -580,23 +770,48 @@
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     padding-top:0px;
+    background-color: #eaefef;
+}
+
+#f-account{
+    display: flex;
+    flex-direction: row;
+    /* to keep account details at bottom */
+    position:inherit;
+}
+
+.profile-picture{
+    display: flex;
+    flex-direction: column;
+    height: 52px;
+    width:52px;
+    
+}
+.profile-picture img {
+    border-radius: 50%;
 }
 .follow{
-    width:150px;
+    width:100px;
     height:35px;
-    background-color:black;
-    display: flex;
+    background-color: #0F1419;
+    display:flex;
+    margin-left:25px;
+    border-radius: 20px;
     align-items: center;
     justify-content: center;
-    border-radius: 25px;
-    margin-left:25px;
+
     
+}
+.follow-account{
+    display:flex;
+    flex-direction: column;
+    margin-left: 35%;
 }
 .follow p1{
     color: white;
     font-size: 14px;
     font-weight: 800;
-    margin:0px;
+    margin:15px;
     
 }
 .terms-and-conditions{

@@ -163,7 +163,7 @@
                                 account_circle
                             </i>
                             <form class="post-text">
-                                <input type="text" placeholder="What's happening?">
+                                <input type="text" placeholder="What's happening?" id= "input-space">
                             </form>
                             
             
@@ -175,14 +175,14 @@
                 
                 
         
-                    <div class="reply-permission">
+                    <!-- <div class="reply-permission">
                         <span class="material-icons" id="globe" >
                             public
                         </span>
                         <p1>
                             Everyone can reply
                         </p1>
-                    </div>  
+                    </div>   -->
                     <div class="bottom-of-tweet-section">
                         <div class="iconsandtweet">
                             <span class="material-icons" id="topicons">
@@ -226,9 +226,13 @@
                 <div class="feed-column" id="post-column">
                     <div class="home-text">
                         <h2>Home</h2>
-                        <span class="material-icons" id="star">
-                            auto_awesome
-                        </span>
+                        <div class= "top-tweets">
+                            <span class="material-icons" id="star">
+                                auto_awesome
+                            </span>
+
+                        </div>
+                        
                     </div>
                     <div class="post-card">
                         <div class="thumbnail">
@@ -248,9 +252,13 @@
                                 <p1>
                                     @TheNamibian · 1h
                                 </p1>
+                            <div class = "dotbox">
                                 <span class="material-icons" id="more-feed">
                                     more_horiz
                                 </span>
+
+                            </div>
+                              
                                 
         
                             </div>
@@ -276,16 +284,16 @@
                             </div>
                             <div class="post-icons">
 
-                                <span class="material-icons" id = "post-icons-id">
+                                <span class="material-icons" id = "post-icons-id-comment">
                                     mode_comment
                                 </span>
-                                <span class="material-icons" id = "post-icons-id">
+                                <span class="material-icons" id = "post-icons-id-transform">
                                     transform
                                 </span>
-                                <span class="material-icons" id = "post-icons-id">
+                                <span class="material-icons" id = "post-icons-id-border">
                                     favorite_border
                                 </span>
-                                <span class="material-icons" id = "post-icons-id">
+                                <span class="material-icons" id = "post-icons-id-upload">
                                     file_upload
                                 </span>
 
@@ -314,9 +322,13 @@
                                 <p1>
                                     @NBCDigitalNews · 2h
                                 </p1>
+                            <div class = "dotbox">
                                 <span class="material-icons" id="more-feed">
                                     more_horiz
                                 </span>
+
+                            </div>
+                                  
                                 
         
                             </div>
@@ -366,39 +378,43 @@
                     <div class="post-card">
                         <div class="thumbnail">
                             <div class="propic">
-                                <img src="data:image/jpeg;base64,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" alt="">
+                                <img src="https://imgs.smoothradio.com/images/224840?width=2480&crop=1_1&signature=coh17sFPwlsyi0gj9FdZWvlLMFQ=" alt="">
                             </div>
         
                         </div>
                         <div class="maindetails">
                             <div class="account-name">
                                 <p2>
-                                    The Namibian
+                                    Michael Jackson
                                 </p2>
                                 <span class="material-icons" id="veryfy">
                                     verified
                                 </span>
                                 <p1>
-                                    @TheNamibian · 1h
+                                    @Michael · 1h
                                 </p1>
+                            <div class = "dotbox">
                                 <span class="material-icons" id="more-feed">
                                     more_horiz
                                 </span>
+
+                            </div>
                                 
         
                             </div>
                             <div class="text-of-post">
                                 <p1>
-                                    The efficiency of the Anti-Corruption Commission (ACC) is once again in
-                                    the spotlight, with political analysts saying the capabilities of the anti-graft
-                                    watchdog's director general, Paulus Noa, is being questioned by the public.
+                                   When I was a child, I went back to the future and learnt how to dance from this child living in Namibia. 
+                                   I do not remember his name, but he was really good looking and had the best moves I have ever seen. Now 
+                                   that I think about it. I think his first name was Sergio. If you know of a handsome Sergio living in Whk
+                                   please contact me.
                                 </p1>
             
                             </div>
                             <div class="post-media">
                                 <div class="pic-upload-container">
                                     <div class="post-pic">
-                                                <img src="https://www.namibian.com.na/public/uploads/images/5dd63a31e3776/Newspaper-Price-Increase.jpg" alt="">
+                                                <img src="https://ca-times.brightspotcdn.com/dims4/default/a1dec1b/2147483647/strip/true/crop/2870x1913+0+0/resize/1486x990!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Ffd%2F7c%2F841956db4799b32eff539f6a39b7%2Fla-ca-jackson-5-112.JPG" alt="">
                                         
                 
                                     </div>
@@ -447,9 +463,12 @@
                                 <p1>
                                     @TheNamibian · 1h
                                 </p1>
+                            <div class = "dotbox">
                                 <span class="material-icons" id="more-feed">
                                     more_horiz
                                 </span>
+
+                            </div>
                                 
         
                             </div>
@@ -514,10 +533,12 @@
                                 <p1>
                                     @TheNamibian · 1h
                                 </p1>
+                            <div class = "dotbox">
                                 <span class="material-icons" id="more-feed">
                                     more_horiz
                                 </span>
-                                
+
+                            </div>
         
                             </div>
                             <div class="text-of-post">
@@ -746,19 +767,19 @@
                                 
                                 <div class="accounts-to-follow">
                                     <div class="follow-account">
-                                        <div class="account-section">
-                                            <i class="material-icons">
-                                                account_circle
+                                        <div class="account-section" id = "f-account">
+                                            <i class="profile-picture">
+                                                <img src="data:image/jpeg;base64,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" alt="">
                                             </i>
-                                            <div class="account-details">
+                                            <div class="account-details" id="f-a">
                                                 <div class="name">
                                                     <p4>
-                                                        Sergio Duchaine
+                                                        Kayla Duchaine
                                                     </p4>
                                                 </div>
                                                 <div class="account-tag">
                                                     <p1>
-                                                        @duchaine_sergio
+                                                        @duchaine_kayla
                                                     </p>
                                                 </div>
                                                 
@@ -772,19 +793,19 @@
                                             </div>
 
                                         </div>
-                                        <div class="account-section">
-                                            <i class="material-icons">
-                                                account_circle
+                                        <div class="account-section" id = "f-account">
+                                            <i class="profile-picture">
+                                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdw4HSZaqIT1wMhZM--I7KfBkdqvQx6a-iPA&usqp=CAU" alt="">
                                             </i>
-                                            <div class="account-details">
+                                            <div class="account-details" id ="f-a">
                                                 <div class="name">
                                                     <p4>
-                                                        Sergio Duchaine
+                                                        Zara Duchaine
                                                     </p4>
                                                 </div>
                                                 <div class="account-tag">
                                                     <p1>
-                                                        @duchaine_sergio
+                                                        @duchaine_zara
                                                     </p>
                                                 </div>
                                                 
